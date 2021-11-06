@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.dlehd.gazuua">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!--
+    여기서 READ는 WRITE에 포함되어 있다. 따라서 WRITE_EXTERNAL_STORAGE만 사용해도 된다.
+    외장메모리가 SD카드만을 의미하는 것이 아니다. 내장 메모리 중에 개발자가 접근할 수 있는 영역이 있다.
+    그 부분을 외장메모리라고 하고, SD카드가 없는 기기라도 저장이 된다.
+    -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.front.autofocus"
+        android:required="false" />
+    <!--
+        feature는 하드웨어를 사용하기 위한 기기권한. 6.0(마시멜로) 이상, sdk 23 이상인 경우 꼭 권한 분기처리 (보통 switch문 쓴다. )를 해야한다. (참고검색어 위험권한)
+        feature은 플레이스토어에서 필터링에 활용되기도 한다. ex)uses-feature...camera 를 사용했다. 만약 카메라가 없는 기기로 플레이스토어에서 어플을 검색하면
+        이 코드를 적어놓은 어플은 검색 안된다.물론 이를 피해 검색되게 하려면 camera 뒤에 required=false로 무조건 필수적이진 않다는 글을 명시하는 방법이 있다.
+    -->
+    <uses-feature android:name="android.hardware.camera2" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <activity android:name=".LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".FacebookHashActivity" />
+        <activity android:name=".Activity_for_FBhash" />
+        <activity android:name=".Chat.Chatting_Main" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.example.dlehd.gazuua"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity android:name=".Member_info.Profile_Activity" />
+        <activity android:name=".board.Post_Read_Activity" />
+        <activity android:name=".board.Post_write_Activity" />
+        <activity android:name=".board.PostEditActivity" />
+        <activity android:name=".Friend_list.Friend_list_main" />
+
+        <service android:name=".firebase.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <!-- [END firebase_service] -->
+        <!-- [START firebase_iid_service] -->
+        <service android:name=".firebase.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <!-- <activity android:name=".Friend_list.FriendList_item" -->
+        <activity android:name=".Chat.ChattingRoomActivity" />
+
+        <service
+            android:name=".Chat.ChatService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".Chat.ChatroomList_item" />
+        <activity
+            android:name=".Member_info.OpencvCamera"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="landscape" />
+        <activity android:name=".Member_info.FilterActivity" />
+
+    </application>
+
+</manifest>

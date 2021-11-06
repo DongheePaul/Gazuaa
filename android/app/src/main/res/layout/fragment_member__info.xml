@@ -1,0 +1,95 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.dlehd.gazuua.Member_info.Member_Info">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/linear_name"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/edit_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp">
+
+        <TextView
+            android:id="@+id/nameTV_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="이름:"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/nameTV_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="이름"
+            android:textSize="30dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/linear_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal"
+        android:id="@+id/linear_email">
+
+        <TextView
+            android:id="@+id/emailTV_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="이메일:"
+            android:textSize="30dp"/>
+
+        <TextView
+            android:id="@+id/emailTV_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="20dp"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="로그아웃"
+        android:layout_below="@+id/linear_email"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/Member_info_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btn_logout"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/btn_logout"
+        android:layout_marginTop="32dp"
+        android:textSize="40dp"
+        android:text="내 정보" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@mipmap/ic_launcher_round"
+        android:layout_below="@+id/Member_info_title"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/edit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/btn_logout"
+        android:layout_below="@+id/imageView1"
+        android:text="이미지 변경" />
+
+</RelativeLayout>

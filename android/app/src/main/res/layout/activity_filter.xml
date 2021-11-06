@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.dlehd.gazuua.Member_info.FilterActivity">
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:id="@+id/iv_image"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/horizontalScrollView"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="70dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:id="@+id/iv_Luv"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginRight="30dp"
+                app:srcCompat="@mipmap/ic_launcher" />
+
+            <ImageView
+                android:id="@+id/iv_Lab"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginRight="30dp"
+                app:srcCompat="@mipmap/ic_launcher" />
+
+            <ImageView
+                android:id="@+id/iv_2YCrCb"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginRight="30dp"
+                app:srcCompat="@mipmap/ic_launcher" />
+            <ImageView
+                android:id="@+id/iv_2HSV"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginRight="30dp"
+                app:srcCompat="@mipmap/ic_launcher" />
+
+            <ImageView
+                android:id="@+id/iv_2BGR"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginRight="30dp"
+                app:srcCompat="@mipmap/ic_launcher" />
+
+            <ImageView
+                android:id="@+id/iv_2gray"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginRight="30dp"
+                app:srcCompat="@mipmap/ic_launcher_round" />
+
+            <ImageView
+                android:id="@+id/iv_2candy"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                app:srcCompat="@mipmap/ic_launcher" />
+
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <Button
+        android:id="@+id/btn_saveProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="13dp"
+        android:text="저장"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

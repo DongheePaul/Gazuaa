@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:orientation="horizontal"
+    android:id="@+id/layout"
+    android:gravity="center">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/layout_left"
+    android:layout_marginTop="5dp"
+    android:visibility="gone">
+
+    <TextView
+        android:id="@+id/tv_visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="9dp"
+        android:id="@+id/iv_friendprofile"/>
+
+    <TextView
+        android:id="@+id/tv_name_left"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:text="Text"
+        android:textSize="15dp"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/iv_friendprofile" />
+
+    <TextView
+        android:id="@+id/tv_content_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="20dp"
+        android:background="#FFFFFF"
+        android:layout_marginRight="9dp"
+        android:layout_below="@+id/tv_name_left"
+        android:layout_toEndOf="@+id/iv_friendprofile" />
+</RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_right"
+        android:layout_marginTop="5dp"
+        android:visibility="gone">
+<!--
+
+        <TextView
+            android:id="@+id/tv_time_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:layout_alignParentTop="true"
+            android:layout_toStartOf="@+id/tv_content_right" />
+
+-->
+
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:id="@+id/tv_content_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:gravity="right"
+            android:background="#F3F781"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            android:textSize="20dp"
+            android:textColor="#000000"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>
