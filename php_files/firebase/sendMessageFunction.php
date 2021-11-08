@@ -1,5 +1,5 @@
 <?php
-define("google_server_key", "AAAA3Knmk-I:APA91bHPwzEmm49ni76KxqrPNskbGq36KktDcAWAikljUT9iui8-_mf3zsLJXRhxl7HUbgt502O7RXMLtRc9eLglash4qvHrRTw2dn5fBtHh3FoeJAy_P1BVLwzUdNLoY0KcRlRHTgNH");
+define("google_server_key", "");
 	function send_notification ($tokens, $message)
 	{
 		$url = 'https://fcm.googleapis.com/fcm/send';
